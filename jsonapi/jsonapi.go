@@ -111,7 +111,7 @@ func GetEmailBatch(db *sql.DB) http.Handler {
 		fromJson(req.Body, &queryOptions)
 
 		if queryOptions.Count <= 0 || queryOptions.Page <= 0 {
-			returnErr(w, errors.New("Page and Count is required"), 400)
+			returnErr(w, errors.New("page and count is required"), 400)
 			return
 		}
 
